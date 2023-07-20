@@ -1,4 +1,3 @@
-import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import BookList from "./components/BookList";
 import BookDetails from "./components/BookDetails";
@@ -8,6 +7,8 @@ import Favorites from "./components/Favorites";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import AdminProtectedRoute from "./layouts/AdminProtectedRoutes";
+
+import "./App.scss";
 
 function App() {
   return (

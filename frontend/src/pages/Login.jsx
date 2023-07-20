@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import UserExport from "../context/UserContext";
 
+import "../sass/Login.scss";
+
 export default function Login() {
   const { setUsers, setToken } = useContext(UserExport.UserContext);
   const [email, setEmail] = useState("");
@@ -49,32 +51,34 @@ export default function Login() {
 
   return (
     <div id="MainLogin">
-      <h1>Connexion</h1>
-      <form onSubmit={getUser}>
-        <label htmlFor="name">Identifiant</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="email@exemple.com"
-          onChange={(event) => {
-            const input = event.target;
-            setEmail(input.value);
-          }}
-        />
+      <div className="login-container">
+        <h1>Connexion</h1>
+        <form onSubmit={getUser}>
+          <label htmlFor="name">Identifiant</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="email@exemple.com"
+            onChange={(event) => {
+              const input = event.target;
+              setEmail(input.value);
+            }}
+          />
 
-        <label htmlFor="password">Mot de passe</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="******"
-          onChange={(event) => {
-            const input = event.target;
-            setPassword(input.value);
-          }}
-        />
+          <label htmlFor="password">Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="******"
+            onChange={(event) => {
+              const input = event.target;
+              setPassword(input.value);
+            }}
+          />
 
-        <button type="submit">Se Connecter</button>
-      </form>
+          <button type="submit">Se Connecter</button>
+        </form>
+      </div>
     </div>
   );
 }

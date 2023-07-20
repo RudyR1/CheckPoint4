@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/appContext";
 
+import "../sass/BookList.scss";
+
 export default function BookList() {
   const [books, setBooks] = useState([]);
 
@@ -28,7 +30,7 @@ export default function BookList() {
   return (
     <div className="book-list">
       {books.map((book) => (
-        <div key={book.id} className="book">
+        <div key={book.id} className="book-list-map">
           <div>
             <h4>{book.title}</h4>
           </div>
@@ -38,20 +40,29 @@ export default function BookList() {
               alt="cover"
               onClick={() => navigate(`/books/${book.id}`)}
             /> */}
-            <button type="submit" onClick={() => navigate(`/books/${book.id}`)}>
+            <button
+              className="button-cover"
+              type="submit"
+              onClick={() => navigate(`/books/${book.id}`)}
+            >
               <img src={book.cover} alt="cover" />
             </button>
           </div>
           <div>
             {favoritesChecker(book.id) ? (
               <button
+                className="button-fav-check"
                 type="button"
                 onClick={() => removeFromFavorites(book.id)}
               >
                 Supprimer des Favoris
               </button>
             ) : (
-              <button type="button" onClick={() => addToFavorites(book)}>
+              <button
+                className="button-add-fav"
+                type="button"
+                onClick={() => addToFavorites(book)}
+              >
                 Ajouter aux Favoris
               </button>
             )}
