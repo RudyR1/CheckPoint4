@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// import App from "../App";
+import "../sass/BookDetails.scss";
 
 function BookDetails() {
   const [book, setBook] = useState({});
