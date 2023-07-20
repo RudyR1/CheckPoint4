@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --greenColor: #1b2a24;
+  --darkColor: #1e1e1e;
+  --secondDarkColor: #1d1d1f;
+  --goldColor: #faad3a;
+  --blueColor: #005aa0;
+  --fontFamily: "Roboto", sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}

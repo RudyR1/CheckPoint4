@@ -3,6 +3,8 @@ import axios from "axios";
 import AddBooks from "../components/AddBooks";
 import UpdateBooks from "../components/UpdateBooks";
 
+import "../sass/Admin.scss";
+
 export default function Admin() {
   const [books, setBooks] = useState([]);
 
@@ -50,7 +52,11 @@ export default function Admin() {
               <img src={book.cover} alt="cover" />
             </div>
             <div>
-              <button type="button" onClick={() => handleDeleteBook(book.id)}>
+              <button
+                className="delbooks"
+                type="button"
+                onClick={() => handleDeleteBook(book.id)}
+              >
                 Supprimer le livre
               </button>
             </div>
