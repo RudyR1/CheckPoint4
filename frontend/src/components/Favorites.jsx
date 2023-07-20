@@ -1,6 +1,8 @@
 import React from "react";
 import { useAppContext } from "../context/appContext";
 
+import "../sass/Favorites.scss";
+
 // import App from "../App";
 
 function Favorites() {
@@ -15,7 +17,7 @@ function Favorites() {
 
   return (
     <div className="favorites">
-      Mes Favoris
+      <h1>Favoris</h1>
       {favorites.length > 0 ? (
         favorites.map((book) => (
           <div key={book.id} className="book">
@@ -42,7 +44,7 @@ function Favorites() {
           </div>
         ))
       ) : (
-        <h1>Vous n'avez pas encore de favoris</h1>
+        <h2>Vous n'avez pas encore de favoris</h2>
       )}
     </div>
   );

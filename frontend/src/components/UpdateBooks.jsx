@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import { useParams } from "react-router-dom";
+import "../sass/UpdateBooks.scss";
 
 export default function UpdateBooks() {
   const [books, setBooks] = useState([]);
@@ -69,7 +69,7 @@ export default function UpdateBooks() {
   };
 
   return (
-    <div>
+    <div className="UpdateBook">
       <h2>Modifier un livre</h2>
       <select value={selectedBookId} onChange={handleChangeBook}>
         <option value="">Sélectionnez un livre à modifier</option>

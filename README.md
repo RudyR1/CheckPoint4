@@ -51,3 +51,7 @@ For deployment, you have to go to `secrets` → app `actions` on the github repo
 - CAPROVER_FRONT_APPNAME : name app on caprover
 - CAPROVER_PASSWORD : password caprover
 - CAPROVER_SERVER : link of domain
+
+### Inspiration
+
+https://example-data.draftbit.com/books?_limit=100

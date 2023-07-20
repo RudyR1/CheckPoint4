@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../sass/AddBooks.scss";
 
 export default function AddBooks() {
   const [bookData, setBookData] = useState({
@@ -39,7 +40,7 @@ export default function AddBooks() {
   };
 
   return (
-    <div>
+    <div className="AddBooks">
       <h2>Ajouter un livre</h2>
       <form onSubmit={handleSubmit}>
         <label>

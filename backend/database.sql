@@ -102,5 +102,26 @@ VALUES
   "Set in the far future amidst a sprawling feudal interstellar empire where planetary dynasties are controlled by noble houses that owe an allegiance to the imperial House Corrino, Dune tells the story of young Paul Atreides (the heir apparent to Duke Leto Atreides and heir of House Atreides) as he and his family accept control of the desert planet Arrakis, the only source of the 'spice' melange, the most important and valuable substance in the cosmos. The story explores the complex, multi-layered interactions of politics, religion, ecology, technology, and human emotion as the forces of the empire confront each other for control of Arrakis.Published in 1965, it won the Hugo Award in 1966 and the inaugural Nebula Award for Best Novel. Dune is frequently cited as the world's best-selling sf novel.",
   'https://images.gr-assets.com/books/1434908555l/234225.jpg',
   'Science Fiction, Fiction, Fantasy, Classics'
+),
+(
+  'The Adventures of Sherlock Holmes',
+  'Arthur Conan Doyle',
+  "It is an old maxim of mine that when you have excluded the impossible, whatever remains, however improbable, must be the truth.'Sherlock Holmes, scourge of criminals everywhere, whether they be lurking in London's foggy backstreets or plotting behind the walls of an idyllic country mansion, and his faithful colleague Dr Watson solve twelve breathtaking and perplexing mysteries.In The Adventures of Sherlock Holmes, the first collection of the great consulting detective's cases, we encounter some of his most famous and devilishly difficult problems, including A Scandal in Bohemia, The Speckled Band, The Red-Headed League, The Blue Carbuncle, The Five Orange Pips and The Man with the Twisted Lip.",
+  'https://images.gr-assets.com/books/1164045516l/3590.jpg',
+  'Classics, Mystery, Fiction, Short Stories, Mystery, Crime, Mystery, Detective, Literature, Adventure, Literature, 19th Century, Historical, Historical Fiction'
+),
+(
+  'The Old Man and the Sea',
+  'Ernest Hemingway',
+  "It is the story of an old Cuban fisherman and his supreme ordeal: a relentless, agonizing battle with a giant marlin far out in the Gulf Stream. Using the simple, powerful language of a fable, Hemingway takes the timeless themes of courage in the face of defeat and personal triumph won from loss and transforms them into a magnificent twentieth-century classic.",
+  'https://images.gr-assets.com/books/1329189714l/2165.jpg',
+  'Classics,Fiction,Literature,Novels,American,Academic,School,Adventure,Classic Literature,20th Century,Literary Fiction'
+),
+(
+  'Moby-Dick or, The Whale',
+  'Herman Melville',
+  "It is the horrible texture of a fabric that should be woven of ships' cables and hawsers. A Polar wind blows through it, and birds of prey hover over it.\ So Melville wrote of his masterpiece, one of the greatest works of imagination in literary history. In part, Moby-Dick is the story of an eerily compelling madman pursuing an unholy war against a creature as vast and dangerous and unknowable as the sea itself. But more than just a novel of adventure, more than an encyclopaedia of whaling lore and legend, the book can be seen as part of its author's lifelong meditation on America. Written with wonderfully redemptive humour, Moby-Dick is also a profound inquiry into character, faith, and the nature of perception.",
+  'https://images.gr-assets.com/books/1327940656l/153747.jpg',
+  'Classics, Fiction, Literature, Adventure'
 );
 
