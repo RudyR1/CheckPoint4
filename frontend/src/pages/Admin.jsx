@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import AddBooks from "../components/AddBooks";
 import UpdateBooks from "../components/UpdateBooks";
 
@@ -21,12 +23,16 @@ export default function Admin() {
   const handleDeleteBook = (id) => {
     axios
       .delete(`${import.meta.env.VITE_BACKEND_URL}/books/${id}`)
-      .then((Response) => {
-        console.info("Livre supprimé avec succès: ", Response.data);
+      .then(() => {
+        toast.success(`Votre Livre a bien été supprimé.`);
         setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
+        // toast.success("Livre supprimé avec succès !");
       })
       .catch((error) => {
         console.error("Le livre n'a pas pu être supprimé: ", error);
+        // // toast.error(
+        // //   "Une erreur s'est produite lors de la suppression du livre."
+        // );
       });
   };
 
@@ -63,6 +69,7 @@ export default function Admin() {
           </div>
         ))}
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 }
