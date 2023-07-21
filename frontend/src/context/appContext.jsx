@@ -13,8 +13,6 @@ export const useAppContext = () => {
 };
 
 function AppContextProvider({ children }) {
-  const [users, setUsers] = useState(null);
-  const [token, setToken] = useState(null);
   const [favorites, setFavorites] = useState([]);
 
   const contextValue = useMemo(() => {
@@ -29,15 +27,11 @@ function AppContextProvider({ children }) {
     };
 
     return {
-      users,
-      setUsers,
-      token,
-      setToken,
       favorites,
       addToFavorites,
       removeFromFavorites,
     };
-  }, [users, setUsers, token, setToken, favorites]);
+  }, [favorites]);
 
   return (
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>

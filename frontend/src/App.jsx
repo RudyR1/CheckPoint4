@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Favorites from "./components/Favorites";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
 import AdminProtectedRoute from "./layouts/AdminProtectedRoutes";
 
 import "./App.scss";
@@ -32,6 +33,7 @@ function App() {
             }
           />
           <Route path="/login" element={<Login />} />
+          <Route path="zut" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />

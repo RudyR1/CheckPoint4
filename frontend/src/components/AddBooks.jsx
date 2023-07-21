@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../sass/AddBooks.scss";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AddBooks() {
   const [bookData, setBookData] = useState({
@@ -24,8 +26,8 @@ export default function AddBooks() {
 
     axios
       .post(`${import.meta.env.VITE_BACKEND_URL}/books`, bookData)
-      .then((res) => {
-        console.info("livre ok", res.data);
+      .then(() => {
+        toast.success(`Votre Livre a bien été rajouté.`);
         setBookData({
           title: "",
           authors: "",
@@ -40,61 +42,64 @@ export default function AddBooks() {
   };
 
   return (
-    <div className="AddBooks">
-      <h2>Ajouter un livre</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Title:
-          <input
-            type="text"
-            required
-            name="title"
-            value={bookData.title}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Authors:
-          <input
-            type="text"
-            required
-            name="authors"
-            value={bookData.authors}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          description:
-          <input
-            type="text"
-            required
-            name="description"
-            value={bookData.description}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          cover:
-          <input
-            type="text"
-            required
-            name="cover"
-            value={bookData.cover}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          genre:
-          <input
-            type="text"
-            required
-            name="genres"
-            value={bookData.genres}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="submit">Valider</button>
-      </form>
-    </div>
+    <>
+      <div className="AddBooks">
+        <h2>Ajouter un livre</h2>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Title:
+            <input
+              type="text"
+              required
+              name="title"
+              value={bookData.title}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Authors:
+            <input
+              type="text"
+              required
+              name="authors"
+              value={bookData.authors}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            description:
+            <input
+              type="text"
+              required
+              name="description"
+              value={bookData.description}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            cover:
+            <input
+              type="text"
+              required
+              name="cover"
+              value={bookData.cover}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            genre:
+            <input
+              type="text"
+              required
+              name="genres"
+              value={bookData.genres}
+              onChange={handleChange}
+            />
+          </label>
+          <button type="submit">Valider</button>
+        </form>
+      </div>
+      <ToastContainer position="top-right" autoClose={3000} />
+    </>
   );
 }
