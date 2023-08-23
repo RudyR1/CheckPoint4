@@ -1,10 +1,10 @@
 .book-list {
     margin-top: 10vh;
     padding: 10px;
-    display: grid;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: space-between;
-    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    // grid-template-columns: repeat(1, 1fr);
   
     .book-list-map {
       width: 200px;

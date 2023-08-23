@@ -90,14 +90,14 @@ const getByCategory = (req, res) => {
 };
 
 const edit = (req, res) => {
-  const video = req.body;
+  const book = req.body;
 
   // TODO validations (length, format...)
 
-  video.id = parseInt(req.params.id, 10);
+  book.id = parseInt(req.params.id, 10);
 
   models.books
-    .update(video)
+    .update(book)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
