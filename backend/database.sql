@@ -54,7 +54,7 @@ CREATE TABLE books (
   id int(11) primary key NOT NULL AUTO_INCREMENT,
   title varchar(255) NOT NULL,
   authors varchar(50) NOT NULL,
-  description varchar(255) NOT NULL,
+  description varchar(2048) NOT NULL,
   cover varchar(255) NOT NULL,
   genres VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
